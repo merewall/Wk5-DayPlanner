@@ -17,15 +17,13 @@ body {
 }
 
 .custom-container {
-  margin-left: 100px;
-  margin-right: 100px;
+  width: 75%
 }
 
 input, .task-input {
   background: transparent;
   border: none;
   resize: none;
-  color: var(--dark);
   padding: 10px;
 }
 
@@ -36,6 +34,7 @@ input, .task-input {
 
 input::placeholder {
   font-style: italic;
+  text-align: right;
 }
 
 .jumbotron {
@@ -45,6 +44,7 @@ input::placeholder {
   border-radius: 0;
   border-bottom: 10px solid var(--dark);
   padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .description {
@@ -67,19 +67,26 @@ input::placeholder {
   border-top: 3px solid var(--offwhite);
 }
 
+.custom-row {
+  height: 40px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .past {
   background-color: var(--mauve);
   color: var(--offwhite);
+  font-style: italic;
 }
 
 .present {
   background-color: var(--present);
-  color: var(--offwhite);
+  color: var(--lighterdark);
 }
 
 .future {
   background-color: var(--future);
-  color: var(--offwhite);
+  color: var(--lighterdark);
 }
 
 .saveBtn {
@@ -94,11 +101,101 @@ input::placeholder {
   color: var(--offwhite);
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
+#options-row {
+  margin-bottom: 20px;
+}
+
+.optionBtn {
+  border: 2px solid var(--dark);
+  background-color: var(--lighterdark);
+  color: var(--offwhite);
+  padding: 6px;
+}
+
+.optionBtn:hover {
+  border: 2px solid var(--offwhite);
+  text-shadow: 0.5px 0.5px var(--mauve);
+}
+
+.saveBtn:hover {
+  border: 2px solid var(--offwhite);
+  background: url('../Images/hover-save-icon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 18%;
   transition: all 0.3s ease-in-out;
+  background-color: var(--lighterdark);
 }
 
 #currentDay {
   padding-top: 20px;
 }
+
+.work:hover, .notWork:hover {
+  border-top: 4.5px solid var(--offwhite);
+  border-bottom: 4.5px solid var(--offwhite);
+  transition: all 0.3s ease-in-out;
+  /* border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px; */
+}
+
+#last-div {
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .jumbotron h1 {
+    font-size: 60px;
+  }
+  
+  .jumbotron p {
+    margin-top: 10px;
+  }
+  
+  .work, .notWork {
+    margin-bottom: 30px;
+  }
+  
+  .row, .task-input {
+    border-top: none;
+  }
+  
+  .custom-container {
+    margin-left: 100px;
+  }
+  
+  .hour-of-day {
+    border-top: 1px dashed var(--lighterdark);
+    border-bottom: 1px dashed var(--lighterdark);
+    margin-bottom: 0px;
+  }
+  }
+
+@media screen and (max-width: 576px) {
+.optionBtn {
+  font-size: 12px;
+}
+
+.jumbotron h1 {
+  font-size: 40px;
+}
+
+.jumbotron p {
+  font-size: 18px;
+}
+
+input::placeholder, .task-input {
+  font-size: 14px;
+}
+
+.schedule-container {
+  width: fit-content;
+}
+
+}
+
+/* .container {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+} */

@@ -163,3 +163,22 @@ function renderToDos() {
     // })
 }
 renderToDos()
+
+let notWorkDivs = $(".notWork");
+
+function showWorkHoursOnly() {
+    notWorkDivs.attr("style", "display:none");
+}
+
+$('#showWorkHours').on("click",showWorkHoursOnly);
+
+function showAllHours() {
+    notWorkDivs.attr("style", "display:reset");
+}
+$('#showAllHours').on("click",showAllHours);
+
+function clearTasks() {
+    localStorage.clear();
+    location.reload();
+}
+$('#clearTasks').on("click",clearTasks);
