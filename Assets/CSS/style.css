@@ -1,0 +1,104 @@
+/* Page color scheme generated from https://coolors.co/*/
+:root {
+  --dark: #3b4254;
+  --lighterdark: #415077;
+  --mauve: #ADA0A6;
+  --present: #6AD0D8;
+  --yellow: #fff8D6;
+  --future: #72AC98;
+  --offwhite: #EFE6E9;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  background-color: var(--offwhite);
+}
+
+.custom-container {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+input, .task-input {
+  background: transparent;
+  border: none;
+  resize: none;
+  color: var(--dark);
+  padding: 10px;
+}
+
+.task-input {
+  border-left: 1px solid var(--lighterdark);
+  border-top: 3px solid var(--offwhite);
+}
+
+input::placeholder {
+  font-style: italic;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: var(--lighterdark);
+  color: var(--offwhite);
+  border-radius: 0;
+  border-bottom: 10px solid var(--dark);
+  padding-bottom: 20px;
+}
+
+.description {
+  white-space: pre-wrap;
+}
+
+.hour-of-day {
+  text-align: center;
+  justify-content: center;
+  padding: 12px 0px 0px 0px;
+  background-color: var(--offwhite);
+  color: var(--dark);
+  border-top: 1px dashed var(--lighterdark);
+  margin-top: px;
+}
+
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  border-top: 3px solid var(--offwhite);
+}
+
+.past {
+  background-color: var(--mauve);
+  color: var(--offwhite);
+}
+
+.present {
+  background-color: var(--present);
+  color: var(--offwhite);
+}
+
+.future {
+  background-color: var(--future);
+  color: var(--offwhite);
+}
+
+.saveBtn {
+  background: url('../Images/saveicon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 18%;
+  border: 2px solid var(--dark);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: var(--lighterdark);
+  color: var(--offwhite);
+}
+
+.saveBtn i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+#currentDay {
+  padding-top: 20px;
+}
