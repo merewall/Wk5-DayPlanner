@@ -18,7 +18,7 @@ body {
 }
 
 /* changing container width to 75% of page */
-.custom-container {
+.schedule-container, .custom-container {
   width: 75%
 }
 
@@ -189,7 +189,7 @@ input:focus {
   }
   
   /* Additional margin on the left of the page */
-  .custom-container {
+  .schedule-container, .custom-container {
     margin-left: 100px;
   }
   
@@ -200,7 +200,7 @@ input:focus {
   }
   }
 
-  /* Responsive layout for phones */
+  /* Responsive layout for smaller devices */
 @media screen and (max-width: 576px) {
   /* Decrease option buttons font size */
 .optionBtn {
@@ -221,4 +221,26 @@ input:focus {
 input::placeholder, .saved-task {
   font-size: 14px;
 }
+}
+
+/* Additional Responsive layout for smaller cell phones */
+@media screen and (max-width: 450px) {
+
+  /* Span planner to width of viewport and center with left margin */
+.schedule-container {
+  width: 100vw;
+  margin: 0px 0px 0px 16px;
+}
+
+/* Adjust span of option buttons container */
+.custom-container {
+  width: 90vw;
+  margin: 0px 0px 0px 16px;
+}
+
+/* Shift jumbotron contents to the left */
+.jumbotron p {
+  margin-right: 20px;
+}
+
 }
