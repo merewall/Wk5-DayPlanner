@@ -243,4 +243,8 @@ input::placeholder, .saved-task {
   margin-right: 20px;
 }
 
+input {
+  border-radius: none;
+}
+
 }
