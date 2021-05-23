@@ -4,30 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Link to bootstrap -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <!-- Link to font awesome -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <!-- Link to google fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <!-- Link to reset and style stylesheets -->
+    <link rel="stylesheet" href="./Assets/CSS/reset.css" />
     <link rel="stylesheet" href="./Assets/CSS/style.css" />
+
     <title>Work Day Scheduler</title>
   </head>
 
   <body>
+    <!-- Jumbotron to display page title, about blurb, and render the generated date -->
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
+    <!-- Flex container for options buttons -->
     <div class="container custom-container">
       <div class="row custom-row" id="options-row">
         <button class="optionBtn" id="showAllHours" type="button">Show All Hours</button>
@@ -35,219 +43,225 @@
         <button class="optionBtn" id="clearTasks" type="button">Clear Tasks</button>
       </div>
     </div>
+    <!-- Flex container to display the day planner elements -->
     <div class="container custom-container schedule-container">
       <!-- Timeblocks go here -->
+      <!-- 1am time block -->
       <div class="row notWork">
+        <!-- Div to render the hour of day into -->
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="0"></div>
+        <!-- Div to render saved tasks -->
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="0"></div>
+        <!-- Form to input tasks and save with a button click -->
         <form class="row col-6 col-sm-6 col-md-5">
           <input class="user-input col-9 col-sm-8 col-md-9" type=text id="1" placeholder="+ add event"></input>
           <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"></button>
         </form>
-        <!-- </div> -->
       </div>
+      <!-- 2am time block -->
       <div class="row notWork">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6  col-md-6" data-value="1"></div>
+        <div class="saved-task col-6 col-sm-6  col-md-6" data-value="1"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="2" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 3am time block -->
       <div class="row notWork">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="2"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="2"></div>
           <form class="row col-6 col-sm-6 col-md-5"rm>
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="3" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 4am time block -->
       <div class="row notWork">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6"  data-value="3"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6"  data-value="3"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="4" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 5am time block -->
       <div class="row notWork">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="4"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="4"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="5" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 6am time block -->
       <div class="row notWork">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="5"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="5"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="6" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 7am time block -->
       <div class="row notWork">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="6"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="6"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="7" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 8am time block -->
       <div class="row work">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6"  data-value="7"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6"  data-value="7"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="8" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 9am time block -->
       <div class="row work">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="8"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="8"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="9" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 10am time block -->
       <div class="row work">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="9"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="9"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="10" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 11am time block -->
       <div class="row work">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="10"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="10"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="11" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 12pm time block -->
       <div class="row work">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="11"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="11"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="12" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 1pm time block -->
       <div class="row work">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="12"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="12"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="13" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 2pm time block -->
       <div class="row work">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="13"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="13"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="14" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 3pm time block -->
       <div class="row work">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="14"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="14"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="15" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 4pm time block -->
       <div class="row work">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="15"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="15"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="16" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 5pm time block -->
       <div class="row work">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="16"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="16"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="17" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 6pm time block -->
       <div class="row notWork">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="17"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="17"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="18" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 7pm time block -->
       <div class="row notWork">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="18"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="18"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="19" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 8pm time block -->
       <div class="row notWork">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="19"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="19"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="20" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 9pm time block -->
       <div class="row notWork">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="20"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="20"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="21" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 10pm time block -->
       <div class="row notWork">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="21"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="21"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="22" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>
+      <!-- 11pm time block -->
       <div class="row notWork" id="last-div">
         <div class="hour-of-day col-10 col-sm-11 col-md-1"></div>
-        <div class="task-input col-6 col-sm-6 col-md-6" data-value="22"></div>
+        <div class="saved-task col-6 col-sm-6 col-md-6" data-value="22"></div>
           <form class="row col-6 col-sm-6 col-md-5">
             <input class="user-input col-9 col-sm-8 col-md-9" type=text id="23" placeholder="+ add event"></input>
             <button type="submit" class="saveBtn col-3 col-sm-4 col-md-3"  ></button>
           </form>
-        <!-- </div> -->
       </div>      
     </div>
-
+    <!-- Link to jquery library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Link to moment.js library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- Link to javascript file -->
     <script src="./Assets/JS/script.js"></script>
   </body>
 </html>

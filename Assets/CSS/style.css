@@ -9,6 +9,7 @@
   --offwhite: #EFE6E9;
 }
 
+/* Setting font-family, font-size, line height, and off-white background for the page */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -16,27 +17,38 @@ body {
   background-color: var(--offwhite);
 }
 
+/* changing container width to 75% of page */
 .custom-container {
   width: 75%
 }
 
-input, .task-input {
+/* No border and a little padding for input and saved-task divs */
+/* coloring set by past/present/future */
+input, .saved-task {
   background: transparent;
   border: none;
   resize: none;
   padding: 10px;
 }
 
-.task-input {
+/* add a left border and top border to the rows */
+.saved-task {
   border-left: 1px solid var(--lighterdark);
   border-top: 3px solid var(--offwhite);
 }
 
+/* make input placeholder text italic and align the the right of the div */
 input::placeholder {
   font-style: italic;
   text-align: right;
 }
 
+/* change outline color for input field when clicked on to make color scheme */
+input:focus {
+  outline-color: var(--dark);
+}
+
+/* Set jumbotron color scheme, align it's text to the center, add a bottom border and some padding and margin to the bottom */
 .jumbotron {
   text-align: center;
   background-color: var(--lighterdark);
@@ -47,10 +59,12 @@ input::placeholder {
   margin-bottom: 20px;
 }
 
+/* Preserves white space, and allows text to wrap when needed and on line breaks */
 .description {
   white-space: pre-wrap;
 }
 
+/* Align the hour to the center of the div, set to the off-white background color with dark text, and add a top border with top padding */
 .hour-of-day {
   text-align: center;
   justify-content: center;
@@ -58,37 +72,35 @@ input::placeholder {
   background-color: var(--offwhite);
   color: var(--dark);
   border-top: 1px dashed var(--lighterdark);
-  margin-top: px;
 }
 
+/* Preserves white space and allows text to wrap when needed. Sets height of each row and adds a top-border */
 .row {
   white-space: pre-wrap;
   height: 80px;
   border-top: 3px solid var(--offwhite);
 }
 
-.custom-row {
-  height: 40px;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
+/* Sets coloring for hour slots that are in the past and makes text italic for the past */
 .past {
   background-color: var(--mauve);
   color: var(--offwhite);
   font-style: italic;
 }
 
+/* Sets coloring for hour slot that is the present */
 .present {
   background-color: var(--present);
   color: var(--lighterdark);
 }
 
+/* Sets coloring for hour slots that are in the future */
 .future {
   background-color: var(--future);
   color: var(--lighterdark);
 }
 
+/* Adds a save button icon, a border with border radius on the right to each save button */
 .saveBtn {
   background: url('../Images/saveicon.png');
   background-position: center;
@@ -101,10 +113,15 @@ input::placeholder {
   color: var(--offwhite);
 }
 
+/* Makes row with buttons have less height than other rows and spaces out buttons evenly. Adds margin buffer between buttons and planner */
 #options-row {
   margin-bottom: 20px;
+  height: 40px;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
+/* Styles buttons to match page color scheme */
 .optionBtn {
   border: 2px solid var(--dark);
   background-color: var(--lighterdark);
@@ -112,90 +129,96 @@ input::placeholder {
   padding: 6px;
 }
 
+/* Changes border color and shadows text on hover over option buttons */
 .optionBtn:hover {
   border: 2px solid var(--offwhite);
   text-shadow: 0.5px 0.5px var(--mauve);
 }
 
+/* Changes border color and save icon on hover over option buttons */
 .saveBtn:hover {
   border: 2px solid var(--offwhite);
   background: url('../Images/hover-save-icon.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 18%;
-  transition: all 0.3s ease-in-out;
   background-color: var(--lighterdark);
 }
 
+/* Removes default outline on focus of save buttons */
+.saveBtn:focus {
+  outline: none;
+}
+
+/* Additional space between the date and the jumbotron paragraph */
 #currentDay {
   padding-top: 20px;
 }
 
+/* Adds top and bottom borders between planner rows */
 .work:hover, .notWork:hover {
   border-top: 4.5px solid var(--offwhite);
   border-bottom: 4.5px solid var(--offwhite);
-  transition: all 0.3s ease-in-out;
-  /* border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px; */
 }
 
+/* Adds additional page space below last planner item */
 #last-div {
   margin-bottom: 60px;
 }
 
+/* Responsive layout for tablets */
 @media screen and (max-width: 768px) {
+  /* Decrease page title size */
   .jumbotron h1 {
     font-size: 60px;
   }
   
+  /* Additional margin between page title and paragraph blurb */
   .jumbotron p {
     margin-top: 10px;
   }
   
+  /* Additional bottom margin between planner rows to accomodate stacking time over the input fields */
   .work, .notWork {
     margin-bottom: 30px;
   }
   
-  .row, .task-input {
+  /* Remove the top border of the planner rows */
+  .row, .saved-task {
     border-top: none;
   }
   
+  /* Additional margin on the left of the page */
   .custom-container {
     margin-left: 100px;
   }
   
+  /* Adds a bottom border and remove bottom margin for hour div, since it is now stacked over input fields */
   .hour-of-day {
-    border-top: 1px dashed var(--lighterdark);
     border-bottom: 1px dashed var(--lighterdark);
     margin-bottom: 0px;
   }
   }
 
+  /* Responsive layout for phones */
 @media screen and (max-width: 576px) {
+  /* Decrease option buttons font size */
 .optionBtn {
   font-size: 12px;
 }
 
+/* Decrease page title size */
 .jumbotron h1 {
   font-size: 40px;
 }
 
+/* Change jumbtron paragraph blurb size */
 .jumbotron p {
   font-size: 18px;
 }
 
-input::placeholder, .task-input {
+/* Decrease input placeholder and saved tasks font size */
+input::placeholder, .saved-task {
   font-size: 14px;
 }
-
-.schedule-container {
-  width: fit-content;
 }
-
-}
-
-/* .container {
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-} */
