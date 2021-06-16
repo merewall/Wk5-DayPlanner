@@ -166,6 +166,10 @@ input:focus {
   margin-bottom: 60px;
 }
 
+footer {
+  min-height: 100px;
+}
+
 /* RESPONSIVENESS */
 
 /* Responsive layout for tablets */
