@@ -27,7 +27,7 @@ The following image shows the web application's appearance and functionality:
 
 ![Demo video of the day planner](https://github.com/merewall/Wk5-DayPlanner/blob/main/Assets/Images/day-planner-demo.gif)  
 
-![Screenshot of the day planner](https://github.com/merewall/Wk5-DayPlanner/blob/main/Assets/Images/day-planner-screenshot/PNG) 
+![Screenshot of the day planner](https://github.com/merewall/Wk5-DayPlanner/blob/main/Assets/Images/day-planner-screenshot.PNG) 
 
 ## Deployed Application Link
 
