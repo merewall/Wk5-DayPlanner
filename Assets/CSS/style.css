@@ -166,6 +166,8 @@ input:focus {
   margin-bottom: 60px;
 }
 
+/* RESPONSIVENESS */
+
 /* Responsive layout for tablets */
 @media screen and (max-width: 768px) {
   /* Decrease page title size */
