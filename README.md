@@ -11,6 +11,16 @@ The following acceptance criteria were used in the development of this web appli
 * When the user clicks into a timeblock, they can enter an event
 * When the user clicks the save button for that timeblock, the text for that event is saved to local storage (and displayed on the page)
 * When the user refreshes the page, the saved events still display on the page
+
+## Technologies Used
+* HTML 5
+* CSS
+* JavaScript
+* [JQuery](https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js)
+* [Moment.js](https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js)
+* [Bootstrap](https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css)
+* [Google Fonts](https://fonts.google.com/)
+* [Font Awesome](https://use.fontawesome.com/releases/v5.8.1/css/all.css)
 ## Mock-Up
 The following image shows the web application's appearance and functionality:
 

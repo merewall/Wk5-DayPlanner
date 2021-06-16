@@ -78,6 +78,7 @@ function handleSaveBtns() {
         let userTaskInput = event.currentTarget[0].value;
         let userTaskId = event.currentTarget[0].id;
 
+        // If nothing is typed in the input, stop the function
         if(!userTaskInput) {
             return
         }
