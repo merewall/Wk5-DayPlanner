@@ -33,3 +33,7 @@ https://merewall.github.io/Wk5-DayPlanner/
 
 The GitHub repository for this web application can be found:
 https://github.com/merewall/Wk5-DayPlanner
+
+## License
+
+Licensed under the [MIT LICENSE](https://github.com/merewall/Wk6-WeatherDashboard/blob/main/LICENSE)
