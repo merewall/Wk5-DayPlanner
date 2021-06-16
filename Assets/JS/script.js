@@ -35,6 +35,7 @@ function renderHoursOfDay() {
         $hoursDivs[i].textContent = hourSlot;
     }
 }
+// Show hours of the day on page load
 renderHoursOfDay()
 
 // Checking whether the current time falls before, after or between each hour on the planner and dynamically changing the styling of the planner based on the time of day
@@ -63,6 +64,7 @@ function hourIntervalCheck() {
         };
     }
 }
+// Conditionally format hours of the day based on the current time when page loads
 hourIntervalCheck();
 
 // Creating a function to handle what happens when any save button is clicked on the day planner
