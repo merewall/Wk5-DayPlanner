@@ -21,6 +21,7 @@ The following acceptance criteria were used in the development of this web appli
 * [Bootstrap](https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css)
 * [Google Fonts](https://fonts.google.com/)
 * [Font Awesome](https://use.fontawesome.com/releases/v5.8.1/css/all.css)
+* [Coolors](https://coolors.co/*/)
 ## Mock-Up
 The following image shows the web application's appearance and functionality:
 
